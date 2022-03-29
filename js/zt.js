@@ -21,10 +21,10 @@ $(function () {
       .find(".zt_nav_item:first")
       .addClass("active")
     //其他关闭
-    // $(".zt_navbar .zt_sub_menu_title")
-    //   .not(this)
-    //   .siblings(".zt_sub_menu")
-    //   .removeClass("show")
+    $(".zt_navbar .zt_sub_menu_title")
+      .not(this)
+      .siblings(".zt_sub_menu")
+      .removeClass("show")
   })
 
   // 控制搜索框显示隐藏
