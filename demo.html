@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Examples</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <style type="text/css">
+      body {
+        width: 100%;
+        height: auto;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .content {
+        width: 150px;
+        height: 50px;
+        overflow: hidden;
+        background-color: red;
+      }
+      .slide-box {
+        width: 300px;
+        position: relative;
+      }
+      .slide1 {
+        width: 150px;
+        height: 50px;
+        float: left;
+        line-height: 50px;
+        text-align: center;
+        background-color: #bdd8cf;
+      }
+      .slide2 {
+        width: 150px;
+        height: 50px;
+        /* 浮动的盒子默认是块级 */
+        float: right;
+        line-height: 50px;
+        text-align: center;
+        background-color: #c1c4c4;
+      }
+      .list_wrapper {
+        width: 300px;
+        overflow: hidden;
+      }
+      .list {
+        width: 640px;
+        height: auto;
+        position: relative;
+        right: 0;
+        top: 0;
+      }
+      .list ul {
+        width: 320px;
+        float: left;
+      }
+      .list ul li {
+        line-height: 30px;
+        color: darkorange;
+      }
+      .list ul:last-of-type li {
+        color: saddlebrown;
+      }
+      .news_wrapper {
+        width: 200px;
+        border-bottom: 1px solid #aaa;
+        position: relative;
+      }
+      .news_wrapper .news_title {
+        padding-bottom: 10px;
+      }
+      .news_wrapper .news_title span {
+        position: relative;
+      }
+      .news_wrapper .news_title span:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: -11px;
+        left: 0;
+        background-color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="news_wrapper">
+      <div class="news_title">
+        <span>新闻中心</span>
+      </div>
+    </div>
+    <!-- <div class="content">
+      <div class="slide-box clearfix">
+        <span class="slide1">左边的元素</span>
+        <span class="slide2">右边的元素</span>
+      </div>
+    </div>
+    <div class="list_wrapper">
+      <div class="list">
+        <ul>
+          <li>第1个li元素</li>
+          <li>第2个li元素</li>
+          <li>第3个li元素</li>
+          <li>第4个li元素</li>
+          <li>第5个li元素</li>
+          <li>第6个li元素</li>
+          <li>第7个li元素</li>
+        </ul>
+        <ul>
+          <li>第1个li元素</li>
+          <li>第2个li元素</li>
+          <li>第3个li元素</li>
+          <li>第4个li元素</li>
+          <li>第5个li元素</li>
+          <li>第6个li元素</li>
+          <li>第7个li元素</li>
+        </ul>
+      </div>
+    </div>
+    <div>哒哒哒</div> -->
+    <script
+      src="js/extends/jquery.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script type="text/javascript">
+      $(function () {
+        $(".content").hover(
+          // slide-box盒子使用了相对定位，控制slide-box盒子的right属性
+          function () {
+            $(".slide-box")
+              .stop(true)
+              .animate({ right: "150px" }, "slow", function () {
+                //动画执行完毕
+                console.log("动画执行完毕")
+                $(".list").animate({ right: "300" }, "slow")
+              })
+          },
+          function () {
+            $(".slide-box")
+              .stop(true)
+              .animate({ right: "0" }, "slow", function () {
+                $(".list").animate({ right: "0" }, "slow")
+              })
+          }
+        )
+      })
+    </script>
+  </body>
+</html>

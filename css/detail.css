@@ -1,0 +1,160 @@
+.article_detail{
+  margin-top:.625rem;
+}
+.zt_detail {
+  padding-bottom: 1.875rem;
+  font-size:.225rem;
+}
+
+.zt_detail .zt_title {
+  font-size: .325rem;
+  font-family: SourceHanSansCN, SourceHanSansCN-Medium;
+  font-weight: 500;
+  text-align: center;
+  color: #333333;
+}
+
+.zt_detail .tool_bar {
+  cursor: pointer;
+  height: .625rem;
+  font-size: .2rem;
+  color: #999;
+  margin: .5rem 0 .675rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+}
+
+.zt_detail .tool_bar > span:not(:last-child) {
+  margin-right: .5125rem;
+}
+
+.zt_detail .tool_bar .color {
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #333333;
+  cursor: pointer;
+}
+
+.zt_detail .tool_bar .color1 {
+  background: #f7f4ad;
+  margin-left: 4px;
+}
+
+.zt_detail .tool_bar .color2 {
+  background: #9edaf4;
+}
+
+.zt_detail .tool_bar .color3 {
+  background: #dfdfdf;
+}
+
+.zt_detail .tool_bar .color4 {
+  background: #fad1d9;
+}
+
+.zt_detail .tool_bar .color5 {
+  background: #e3c7f7;
+}
+
+.zt_detail .tool_bar .color6 {
+  background: #fff;
+}
+
+.zt_detail .zt_content {
+  margin-bottom: 40px;
+  font-size: inherit;
+  font-family: SourceHanSansCN, SourceHanSansCN-Regular;
+  font-weight: 400;
+  text-align: justify;
+  color: #333333;
+  line-height: 2;
+}
+
+.zt_detail .zt_content > img {
+  width: 100%;
+}
+
+.zt_detail .zt_content p {
+  margin: 20px 0;
+}
+
+.zt_detail .share_bar {
+  font-size: inherit;
+  margin-bottom: .25rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.zt_detail .share_bar .share {
+  font-family: SourceHanSansCN, SourceHanSansCN-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #333333;
+  margin-right: .1875rem;
+}
+.zt_detail .share_bar img{
+  width:.425rem;
+  height: .425rem;
+}
+
+.zt_detail .share_bar .share_item {
+  cursor: pointer;
+  margin-right: .125rem;
+}
+
+.zt_detail .line {
+  width: 100%;
+  height: 1px;
+  background-color: #c7c7c7;
+}
+.zt_detail .pre_news,
+.zt_detail .next_news {
+  font-family: SourceHanSansCN, SourceHanSansCN-Regular;
+  font-weight: 400;
+  text-align: justify;
+  color: #333333;
+  font-size:inherit;
+  padding-top:.35rem;
+}
+.zt_detail .share_item.weixin_share{
+  position: relative;
+}
+
+
+.weixin_popup #code{
+  margin: .2rem auto;
+}
+.weixin_popup{
+  width:240px;
+  padding: 10px 20px;
+  border: solid 1px #d8d8d8;
+  font-size:12px;
+  position: absolute;
+  z-index:1002;
+  top:40px;
+  left:80px;
+  border-radius: 4px;;
+  background-color: #fff;
+  display: none;
+}
+.weixin_popup .weixin_popup_head{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.weixin_popup .weixin_popup_head .weixin_popuo_close{
+  color:#666;
+  text-decoration: none;
+}
+.weixin_popup .weixin_popup_foot{
+  font-size: 12px;
+  text-align: left;
+  line-height: 22px;
+  color: #666;
+}
