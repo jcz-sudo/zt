@@ -8,6 +8,7 @@ body p {
 }
 body a{
   color:#333;
+  text-decoration: none;
 }
 .pl-2{
   padding:0 0 .225rem .325rem;
