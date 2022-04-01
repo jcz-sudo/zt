@@ -73,13 +73,24 @@
   color: #333333;
   line-height: 2;
 }
-
+/* 详情页面内容样式 */
 .zt_detail .zt_content > img {
-  width: 100%;
+  width: 100% !important;
 }
 
 .zt_detail .zt_content p {
-  margin: 20px 0;
+  font-size:.225rem !important;
+  margin: .25rem 0 !important;
+}
+
+.a_block{
+  width:100%;
+  height: 100%;
+  display: block;
+}
+.img_block{
+  display: block;
+  width:100%;
 }
 
 .zt_detail .share_bar {

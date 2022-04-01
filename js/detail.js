@@ -2,8 +2,16 @@ $(function () {
   //顶部导航栏激活
   let url = window.location.search
   let index = Number(url.split("=")[1] - 1)
-  console.log($(".nav-item").eq(index))
   $(".nav-item").eq(index).addClass("active")
+
+  console.log($(".zt_content img"))
+  $(".zt_content img").each(function (index, element) {
+    console.log(element)
+    $(element).addClass("img_block")
+
+    $(element).parent().addClass("a_block")
+  })
+  $(this).parent().addClass("highlight")
 
   //控制字体
   $(".tool_bar .font_size").delegate("span", "click", function (e) {

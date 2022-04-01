@@ -31,7 +31,11 @@ $(function () {
   $(".search_link").on("click", function () {
     $(".zt_layout").toggleClass("d-none")
   })
-  $(".zt_layout").on("click", function () {
+  $(".zt_layout").on("click", function (event) {
+    console.log(event.target.nodeName)
+    if (event.target.nodeName === "INPUT") {
+      return
+    }
     $(".zt_layout").addClass("d-none")
   })
 })

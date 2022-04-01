@@ -46,7 +46,9 @@ footer a:hover {
   color: #ffffff;
   position: relative;
 }
-
+.app_footer .footer_wrapper .link_item .title>a{
+  color:#fff;
+}
 .app_footer .footer_wrapper .link_item .title::after {
   content: "";
   display: inline-block;

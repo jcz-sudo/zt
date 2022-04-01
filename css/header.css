@@ -53,7 +53,11 @@
   display: block;
   font-size: .225rem;
 }
-
+.navbar .navbar-nav>.nav-item>.nav_link.search_link img{
+  width: .25rem;
+  height: .25rem;
+  vertical-align: middle;
+}
 .navbar .navbar-nav>li.active {
   background-color: #004fa5;
 }
@@ -74,9 +78,9 @@
 
 
 @media screen and (max-width: 992px) {
-  .navbar {
+  /* .navbar {
     width: 98%;
-  }
+  } */
 
   /* .navbar .navbar-nav {
     height: 300px;

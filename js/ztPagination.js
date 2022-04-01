@@ -31,7 +31,7 @@ function ztPageInit({
   // 注入结构
   myPageEl.innerHTML = pageHtmlStr
   // 标记默认页
-  clickPageFun(currentPage)
+  clickPageFun(currentPage, true) //初次不调用回调函数
 
   // 上下页切换事件注册
   let btns = document.querySelectorAll(`${element} div`)
@@ -63,7 +63,7 @@ function ztPageInit({
   }
 
   // 分页切换处理
-  function clickPageFun(page) {
+  function clickPageFun(page, init) {
     page = Number(page)
     // 满足条件改变结构
     if (pages > 7) {
@@ -117,7 +117,9 @@ function ztPageInit({
     forbidden(page)
 
     // 回调响应
-    callback && callback(page)
+    if (!init) {
+      callback && callback(page)
+    }
   }
 
   // 上下页按钮启禁

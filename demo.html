@@ -122,7 +122,7 @@
       </div>
     </div>
     <div>哒哒哒</div> -->
-    <script
+    <!-- <script
       src="js/extends/jquery.js"
       type="text/javascript"
       charset="utf-8"
@@ -148,6 +148,46 @@
               })
           }
         )
+      })
+    </script> -->
+    <ul>
+      <li>
+        <a class="item-1st">一级菜单1</a>
+        <ul class="nav-2nd">
+          <li>
+            <a class="item-2nd">二级菜单</a>
+            <ul class="nav-3rd">
+              <li>
+                <a class="item-3">三级菜单1</a>
+              </li>
+              <li>三级菜单2</li>
+            </ul>
+          </li>
+          <li>
+            <a class="item-2nd">二级菜单</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="item-1st">一级菜单2</a>
+      </li>
+    </ul>
+    <script
+      src="js/extends/jquery.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script>
+      $(".item-1st").click(function () {
+        $(this).next().slideToggle()
+      })
+      $(".item-2nd").click(function () {
+        if (window.event) {
+          event.cancelBubble = true //IE下阻止冒泡
+        } else {
+          event.stopPropagation()
+        }
+        $(this).next().slideToggle()
       })
     </script>
   </body>

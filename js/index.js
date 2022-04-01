@@ -6,9 +6,9 @@ $(function () {
   $(".carousel").carousel() //轮播
   //时间线
   $(".line_point").on("click", function () {
-    $(".line_point").removeClass("active")
+    $(".line_point span").removeClass("active")
     let index = $(this).index()
-    $(this).addClass("active")
+    $(this).children("span").addClass("active")
     $(".history .time_desc").addClass("d-none")
     $(".history .time_desc").eq(index).removeClass("d-none")
     $(".history .video").addClass("d-none")

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1 , user-scalable=no"
+      content="width=device-width, initial-scale=1"
     />
     <title>中铁隧道局</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
@@ -39,12 +39,14 @@
           <li class="nav-item"><a target="_blank" class="nav_link" href="./resource.html">人力资源</a></li>
           <li class="nav-item">
             <a
-              class="nav_link"
+              class="nav_link search_link"
               target="_blank"
               href="#"
               data-toggle="modal"
               data-target="#searchModel"
-              >搜索</a
+              >搜索
+              
+              <img src="../imgs/icons/search.png" alt="" ></a
             >
           </li>
           
@@ -58,7 +60,7 @@
           <div>
             <input class="zt_search_input" id="message-text" placeholder="请输入搜索内容" name="clear"/>
             <button class="zt_search_btn">
-            <a href="./html/searchRes.html" class="d-block text-decoration-none">搜索</a> 
+            <a class="d-block text-decoration-none">搜索</a> 
             </button>
           </div>
         </div>
@@ -71,6 +73,15 @@
       <div class="zt_list_body_right"  style="padding-left:0">
         <!-- 图文列表页 -->
         <article > 
+          <!-- 链接 -->
+          <div class="img_text_item d-flex flex-column justify-content-between">
+            <div class="img_text_title">公司各单位积极开展庆祝建党100周年活动</div>
+            <div class="img_text_desc">百年征程波澜壮阔，百年恰是风华正茂。为庆祝中国共产党成立100周年，公司各单位开展各具特色主题活动~>百年征程波澜壮阔，百年恰是风华正茂。为庆祝中国共产党成立100周年，公司各单位开展各具特色主题活动~>百年征程波澜壮阔，百年恰是风华正茂。为庆祝中国共产党成立100周年，公司各单位开展各具特色主题活动~>百年征程波澜壮阔，百年恰是风华正茂。为庆祝中国共产党成立100周年，公司各单位开展各具特色主题活动~>百年征程波澜壮阔，百年恰是风华正茂。为庆祝中国共产党成立100周年，公司各单位开展各具特色主题活动~>百年征程波澜壮阔，百年恰是风华正茂。为庆祝中国共产党成立100周年，公司各单位开展各具特色主题活动~>百年征程波澜壮阔，百年恰是风华正茂。为庆祝中国共产党成立100周年，</div>
+            <div>
+              <span class="img_text_time">2021-03-20</span> 
+              <span class="img_text_visit">浏览：350</span>
+             </div>
+          </div>
           <div class="row img_text_item no-gutters">
             <div class="col-3 px-0">
               <img src="http://crtg.com/Portals/0/C_Info/ImageFile/437/4cfb311f-88a8-4607-b93f-b8e16b412c0e_thumb.jpg" alt="">
@@ -290,4 +301,10 @@
   <script src="../js/extends/jquery.singlePageNav.min.js"></script>
   <script src="../js/zt.js"></script>
   <script src="../js/ztPagination.js"></script>
+  <script>
+    $(".zt_search_btn").on("click",function(){
+      let val = $("#message-text").val()
+      console.log(val)
+    })
+  </script>
 </html>
